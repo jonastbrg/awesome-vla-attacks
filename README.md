@@ -65,6 +65,10 @@ While [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) 
 - **Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models** (2024)
   - *Summary:* Proposes the Physical Vulnerability Evaluating Pipeline (PVEP) to assess robustness against specific visual threats: Out-of-Distribution scenarios, Typography-based Visual Prompts, and Adversarial Patches.
   - [[Paper]](https://arxiv.org/abs/2409.13174)
+ 
+- **Phantom Menace: Systematic Physical Sensor Attacks on Vision-Language-Action Models** (2025)
+  - *Summary:* Presents the first systematic study of physical sensor attacks (blindness, dazzle, acoustic noise) on VLAs. Introduces the "Real-Sim-Real" framework to automate the simulation of 6 camera and 2 microphone attack vectors, validating them on real robotic systems.
+  - [[Paper]](https://arxiv.org/abs/2511.10008) [[Code]](https://github.com/ZJUshine/Phantom-Menace)
 
 ### 🦠 Physical Backdoors (Trojans)
 *Attacks requiring training-time poisoning. The robot behaves normally until a specific physical object or pattern appears.*
