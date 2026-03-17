@@ -48,8 +48,12 @@ While [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) 
   - *Summary:* Introduces SafeMindBench (5,558 samples across 4 hazard categories) targeting safety failures in Task Understanding, Perception, Planning, and Action. Also proposes SafeMindAgent, a Planner–Executor system with cascaded safety modules enforcing factual, causal, and temporal constraints, substantially boosting safety without degrading task success.  
   - [[Paper]](https://arxiv.org/pdf/2509.25885)
 
-- **SENTINEL: A Multi-Level Formal Framework for Safety Evaluation of LLM-based Embodied Agents** (2025)  
-  - *Summary:* A temporal-logic-based framework that formally verifies safety at the semantic, plan, and trajectory levels, exposing violations that heuristic or LLM-judgment-based methods miss.  
+- **ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation using Multi-modal Large Language Models** (2025)
+  - *Summary:* Evaluates MLLMs on responsible robotic manipulation across safety dimensions aligned with ISO standards (ISO 12100/13849-1), including active safety, semantic safety, jailbreak resistance, and ethical decision-making. Tests GPT-4V/4o, Qwen2-VL, and InternVL.
+  - [[Paper]](https://arxiv.org/pdf/2512.04308)
+
+- **SENTINEL: A Multi-Level Formal Framework for Safety Evaluation of LLM-based Embodied Agents** (2025)
+  - *Summary:* A temporal-logic-based framework that formally verifies safety at the semantic, plan, and trajectory levels, exposing violations that heuristic or LLM-judgment-based methods miss.
   - [[Paper]](https://arxiv.org/pdf/2510.12985)
 
 ---
@@ -62,10 +66,14 @@ While [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) 
   - *Summary:* A unified study covering data construction to inference attacks. Introduces `BackdoorVLA`, a method to force robots into specific long-horizon malicious trajectories (e.g., "folding a cloth" becomes "dropping it").
   - [[Paper]](https://arxiv.org/abs/2511.12149)
 
+- **Adversarial Robustness in Embodied AI: A Closed-Loop Perspective on Attacks and Defenses** (2026)
+  - *Summary:* A survey organizing adversarial attacks and defenses across the full perception–decision–planning–execution loop. Proposes a closed-loop taxonomy showing how small perturbations at early stages accumulate and amplify through interaction, and distinguishes optimization-time vs. deployment-time interventions.
+  - [[Paper]](https://d197for5662m48.cloudfront.net/documents/publicationstatus/307004/preprint_pdf/530df22cb521a819e30da162d1ddd85f.pdf)
+
 - **Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models** (2024)
   - *Summary:* Proposes the Physical Vulnerability Evaluating Pipeline (PVEP) to assess robustness against specific visual threats: Out-of-Distribution scenarios, Typography-based Visual Prompts, and Adversarial Patches.
   - [[Paper]](https://arxiv.org/abs/2409.13174)
- 
+
 - **Phantom Menace: Systematic Physical Sensor Attacks on Vision-Language-Action Models** (2025)
   - *Summary:* Presents the first systematic study of physical sensor attacks (blindness, dazzle, acoustic noise) on VLAs. Introduces the "Real-Sim-Real" framework to automate the simulation of 6 camera and 2 microphone attack vectors, validating them on real robotic systems.
   - [[Paper]](https://arxiv.org/abs/2511.10008) [[Code]](https://github.com/ZJUshine/Phantom-Menace)
@@ -123,6 +131,10 @@ While [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) 
 - **Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics** (2024)
   - *Summary:* Develops robotic-specific attack objectives using adversarial patches tailored to spatial foundations and trajectory manipulation. Achieves up to 100% reduction in task success rates in both simulated and physical environments.
   - [[Paper]](https://arxiv.org/abs/2411.13587) [[Code]](https://github.com/William-wAng618/roboticAttack)
+
+- **Exploring the Robustness of Vision-Language-Action Models against Sensor Attacks** (2025)
+  - *Summary:* First study of sensor-level attacks (sound, light, EM signal injection) on VLA models. Tests π0 and π0-fast, finding that multi-visual-sensor architectures provide strong robustness since disrupting a single sensor does not significantly degrade performance.
+  - [[Paper]](https://dl.acm.org/doi/10.1145/3733800.3763262)
 
 - **Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models** (2025)
   - *Summary:* Introduces EDPA (Embedding Disruption Patch Attack), which corrupts semantic alignment in the embedding space without requiring model knowledge. Uniquely provides both attack methodology and defense via adversarial fine-tuning of the visual encoder.
