@@ -52,9 +52,25 @@ While [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) 
   - *Summary:* Evaluates MLLMs on responsible robotic manipulation across safety dimensions aligned with ISO standards (ISO 12100/13849-1), including active safety, semantic safety, jailbreak resistance, and ethical decision-making. Tests GPT-4V/4o, Qwen2-VL, and InternVL.
   - [[Paper]](https://arxiv.org/pdf/2512.04308)
 
+- **LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization** (2025)
+  - *Summary:* Extends LIBERO with systematic perturbations over manipulated objects, initial states, instructions, and environments to measure whether VLA success reflects real generalization instead of benchmark memorization.
+  - [[Paper]](https://arxiv.org/abs/2510.03827) [[Code]](https://github.com/Zxy-MLlab/LIBERO-PRO)
+
+- **LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models** (2025)
+  - *Summary:* Stress-tests VLA models across seven controlled perturbation dimensions, showing severe brittleness to viewpoint and initial-state changes and, more damningly, that many models appear to underuse language altogether.
+  - [[Paper]](https://arxiv.org/abs/2510.13626) [[Code]](https://github.com/sylvestf/LIBERO-plus)
+
+- **HUGE-Bench: A Benchmark for High-Level UAV Vision-Language-Action Tasks** (2026)
+  - *Summary:* Benchmarks high-level UAV VLA agents on long-horizon aerial tasks that require planning, grounding, and control under drone-specific constraints rather than tabletop manipulation shortcuts.
+  - [[Paper]](https://arxiv.org/abs/2603.19822)
+
 - **SENTINEL: A Multi-Level Formal Framework for Safety Evaluation of LLM-based Embodied Agents** (2025)
   - *Summary:* A temporal-logic-based framework that formally verifies safety at the semantic, plan, and trajectory levels, exposing violations that heuristic or LLM-judgment-based methods miss.
   - [[Paper]](https://arxiv.org/pdf/2510.12985)
+
+- **When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs** (2026)
+  - *Summary:* Introduces LIBERO-CF to measure counterfactual language-following failures and proposes Counterfactual Action Guidance (CAG), a plug-in inference method that reduces shortcut-driven behavior when vision cues conflict with instructions.
+  - [[Paper]](https://arxiv.org/abs/2602.17659)
 
 ---
 
@@ -65,6 +81,10 @@ While [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) 
 - **AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models** (2025)
   - *Summary:* A unified study covering data construction to inference attacks. Introduces `BackdoorVLA`, a method to force robots into specific long-horizon malicious trajectories (e.g., "folding a cloth" becomes "dropping it").
   - [[Paper]](https://arxiv.org/abs/2511.12149)
+
+- **Uncovering Linguistic Fragility in Vision-Language-Action Models via Diversity-Aware Red Teaming** (2026)
+  - *Summary:* Studies instruction-channel brittleness with diversity-aware prompt generation to expose behavior-altering failure modes in VLA policies under natural-language variation.
+  - [[Paper]](https://arxiv.org/abs/2604.05595)
 
 - **Adversarial Robustness in Embodied AI: A Closed-Loop Perspective on Attacks and Defenses** (2026)
   - *Summary:* A survey organizing adversarial attacks and defenses across the full perception–decision–planning–execution loop. Proposes a closed-loop taxonomy showing how small perturbations at early stages accumulate and amplify through interaction, and distinguishes optimization-time vs. deployment-time interventions.
@@ -88,6 +108,10 @@ While [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) 
 - **TabVLA: Targeted Backdoor Attacks on Vision-Language-Action Models** (2025)
   - *Summary:* Investigates *targeted* backdoor attacks via black-box fine-tuning. Introduces threat models for input-stream editing and in-scene triggering, highlighting the vision channel as the primary attack surface.
   - [[Paper]](https://arxiv.org/abs/2510.10932)
+
+- **SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models** (2026)
+  - *Summary:* Introduces a stealthy training-time poisoning attack that manipulates chunked action trajectories to preserve clean-task performance while reliably triggering malicious behaviors at deployment.
+  - [[Paper]](https://arxiv.org/abs/2601.14323)
 
 - **BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization** (2024)
   - *Summary:* Uses a two-stage process to isolate trigger features from benign features, allowing the backdoor to remain "stealthy" (high performance on clean tasks) while being lethal when triggered.
@@ -120,6 +144,17 @@ While [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics) 
   - *Summary:* Focuses on generating adversarial examples that transfer effectively to closed-source (black-box) models, a critical threat model for commercial robotics.
   - [[Paper]](https://arxiv.org/pdf/2505.01050)
 
+- **SABER: A Stealthy Agentic Black-Box Attack Framework for Vision-Language-Action Models** (2026)
+  - *Summary:* Proposes an agentic black-box attacker that uses GRPO-trained ReAct strategies and bounded character/token/prompt edits to generate stealthy adversarial instructions. On LIBERO across six VLA models, it reports substantial success-rate drops with fewer edits than strong GPT-based baselines.
+  - [[Paper]](https://arxiv.org/abs/2603.24935) [[Code]](https://github.com/wuxiyang1996/SABER)
+
+- **TRAP: Hijacking VLA CoT-Reasoning via Adversarial Patches** (2026)
+  - *Summary:* Targets intermediate chain-of-thought reasoning in VLA controllers using physical adversarial patches, enabling targeted behavior hijacking without changing the original user instruction.
+  - [[Paper]](https://arxiv.org/abs/2603.23117)
+
+- **Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models** (2026)
+  - *Summary:* Presents an end-to-end 3D texture attack pipeline with differentiable optimization in simulation, showing physically plausible object-surface perturbations can sharply degrade VLA manipulation performance.
+  - [[Paper]](https://arxiv.org/abs/2604.01618) [[Code]](https://github.com/vla-attack/tex3d)
 - **Adversarial Attacks on Robotic Vision Language Action Models** (Gray Swan AI, 2025)
   - *Summary:* Adapts Greedy Coordinate Gradient (GCG) attacks to continuous control. They frame safety not as "harm" but as "control authority"—can an attacker hijack the arm to any arbitrary position?
   - [[Paper]](https://arxiv.org/pdf/2506.03350)
